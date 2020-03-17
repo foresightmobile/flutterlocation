@@ -50,11 +50,12 @@
     if (!(self.hasInit)) {
         self.hasInit = YES;
 
-        if ([CLLocationManager locationServicesEnabled]) {
+        // Always initialise regardless
+//        if ([CLLocationManager locationServicesEnabled]) {
             self.clLocationManager = [[CLLocationManager alloc] init];
             self.clLocationManager.delegate = self;
             self.clLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        }
+//        }
     }
 }
 
